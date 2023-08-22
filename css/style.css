@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.example1 {
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 600px;
+    height: 20px;
+    border: 1px solid green;
+}
+
+.line {
+    width: 90%;
+    height: 100%;
+    background-color: yellowgreen;
+    animation-name: anim1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
+.example2 {
+    margin-bottom: 50px;
+    width: 90px;
+    height: 30px;
+    background-color: orange;
+    animation-name: anim2;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+
+.example2:hover {
+    animation-play-state: running;
+}
+
+.example3 {
+    position: relative;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border: 1px solid darkblue;
+}
+
+.ball {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: blue;
+    animation: anim3 5s infinite, anim4 5s linear infinite;
+}
+
+@keyframes anim1 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 90%;
+    }
+}
+
+@keyframes anim2 {
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes anim3 {
+    0% {
+        top: 0;
+        animation-timing-function: ease-in;
+    }
+    22% {
+        top: 90px;
+        animation-timing-function: ease-out;
+    }
+    40% {
+        top: 50px;
+        animation-timing-function: ease-in;
+    }
+    58% {
+        top: 90px;
+        animation-timing-function: ease-out;
+    }
+    70% {
+        top: 70px;
+        animation-timing-function: ease-in;
+    }
+    82% {
+        top: 90px;
+        animation-timing-function: ease-out;
+    }
+    91% {
+        top: 83px;
+        animation-timing-function: ease-in;
+    }
+    100% {
+        top: 90px;
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes anim4 {
+    from {
+        left: 0;
+    }
+    to {
+        left: 90px;
+    }
+}
